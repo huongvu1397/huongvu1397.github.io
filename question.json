@@ -1,0 +1,37 @@
+[
+    {
+        "question":"If permissions are missing the application will get this at runtime",
+        "optA":"Parser",
+        "optB":"SQLiteOpenHelper",
+        "optC":"Security Exception",
+        "answer":"Sercurity Exception"
+    },
+    {
+        "question":"Some questions",
+        "optA":"A",
+        "optB":"B",
+        "optC":"C",
+        "answer":"C"
+    },
+    {
+        "question":"Some questions",
+        "optA":"A",
+        "optB":"B",
+        "optC":"C",
+        "answer":"A"
+    },
+    {
+        "question":"Some questions",
+        "optA":"A",
+        "optB":"B",
+        "optC":"C",
+        "answer":"B"
+    },
+    {
+        "question":"Some questions",
+        "optA":"A",
+        "optB":"B",
+        "optC":"C Exception",
+        "answer":"A"
+    }
+]
