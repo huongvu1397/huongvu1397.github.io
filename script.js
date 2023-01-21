@@ -1164,15 +1164,15 @@ function handlePointerMove(event) {
 function handleKeydown(event) {
 	// P
 	if (event.keyCode === 80) {
-		togglePause();
+		//togglePause();
 	}
 	// O
 	else if (event.keyCode === 79) {
-		toggleMenu();
+		//toggleMenu();
 	}
 	// Esc
 	else if (event.keyCode === 27) {
-		toggleMenu(false);
+		//toggleMenu(false);
 	}
 }
 
