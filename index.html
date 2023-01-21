@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Firework Show</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -14,7 +24,108 @@
 <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
 
+<style>
+.example1 {
+ margin-top: 0px;
+  margin-bottom: 10px;
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example1 h3 {
+ font-size: 3em;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+</style>
+
+<style>
+.example3 {
+ height: 400px;	
+ overflow: hidden;
+ position: relative;
+}
+.example3 h3 {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateY(-100%);
+ -webkit-transform:translateY(-100%);	
+ transform:translateY(-100%);
+ /* Apply animation to this element */	
+ -moz-animation: example3 15s linear infinite;
+ -webkit-animation: example3 15s linear infinite;
+ animation: example3 15s linear infinite;
+ background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example3 {
+ 0%   { -moz-transform: translateY(-100%); }
+ 100% { -moz-transform: translateY(10%); }
+}
+@-webkit-keyframes example3 {
+ 0%   { -webkit-transform: translateY(-100%); }
+ 100% { -webkit-transform: translateY(10%); }
+}
+@keyframes example3 {
+ 0%   { 
+ -moz-transform: translateY(150%); /* Firefox bug fix */
+ -webkit-transform: translateY(150%); /* Firefox bug fix */
+ transform: translateY(150%); 		
+ }
+ 100% { 
+ -moz-transform: translateY(-10%); /* Firefox bug fix */
+ -webkit-transform: translateY(-10%); /* Firefox bug fix */
+ transform: translateY(-10%); 
+ }
+}
+</style>
+
+
 </head>
+
 <body>
 <!-- partial:index.partial.html -->
 <!-- SVG Spritesheet -->
@@ -43,24 +154,33 @@
 
 <!-- App -->
 <div class="container">
+
 	<div class="loading-init">
 		<div class="loading-init__header">Loading</div>
 		<div class="loading-init__status">Assembling Shells</div>
 	</div>
 	<div class="stage-container remove">
 		<div class="canvas-container">
-			<canvas id="trails-canvas"></canvas>
+			<canvas id="trails-canvas"></canvas>			
+			<div class="example1">
+			<h3>Chúc mừng năm mới 2023</h3>
+			</div>
+			<div class="example3">
+			 <h3 id="title"></h3>
+		    <!-- And make it cheesy ! -->
+		    	 <h3>Thân gửi Hải Anh yêu dấu!<br/>Anh muốn dành tất cả những lời chúc tốt đẹp nhất trong năm mới cho em. Hy vọng rằng chúng ta sẽ ở bên nhau và có một năm mới thật tốt đẹp!<br/>From Hưởng with love ♥ </h3>        
+			</div>
 			<canvas id="main-canvas"></canvas>
 		</div>
 		<div class="controls">
 			<div class="btn pause-btn">
-				<svg fill="white" width="24" height="24"><use href="#icon-pause" xlink:href="#icon-pause"></use></svg>
+				<svg fill="white" width="0" height="0"><use></use></svg>
 			</div>
 			<div class="btn sound-btn">
 				<svg fill="white" width="24" height="24"><use href="#icon-sound-off" xlink:href="#icon-sound-off"></use></svg>
 			</div>
 			<div class="btn settings-btn">
-				<svg fill="white" width="24" height="24"><use href="#icon-settings" xlink:href="#icon-settings"></use></svg>
+				<svg fill="white" width="0" height="0"><use></use></svg>
 			</div>
 		</div>
 		<div class="menu hide">
@@ -130,7 +250,15 @@
 <!-- partial -->
   <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js'></script><script  src="./script.js"></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js'>
+</script><script src="./script.js"></script>
 
 </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+
+
 </html>

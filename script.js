@@ -1125,7 +1125,7 @@ function handlePointerStart(event) {
 	
 	if (event.y < btnSize) {
 		if (event.x < btnSize) {
-			togglePause();
+			//togglePause();
 			return;
 		}
 		if (event.x > mainStage.width/2 - btnSize/2 && event.x < mainStage.width/2 + btnSize/2) {
@@ -1133,7 +1133,7 @@ function handlePointerStart(event) {
 			return;
 		}
 		if (event.x > mainStage.width - btnSize) {
-			toggleMenu();
+			//toggleMenu();
 			return;
 		}
 	}
