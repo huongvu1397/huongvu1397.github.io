@@ -120,4 +120,4 @@ window.addEventListener("resize", resizeCanvas, false);
                 c.fill();
                 c.restore();
             }
-        } 
+        }
