@@ -14,14 +14,16 @@ window.addEventListener("resize", resizeCanvas, false);
         var canvas, ctx, w, h, particles = [], probability = 0.04,
             xPoint, yPoint;
         
-        
-        
-        
+        var text='';
+       
         
         function onLoad() {
             canvas = document.getElementById("canvas");
             ctx = canvas.getContext("2d");
             resizeCanvas();
+
+		audio.play();
+		audio.volume=1;
             
             window.requestAnimationFrame(updateWorld);
         } 
@@ -53,6 +55,14 @@ window.addEventListener("resize", resizeCanvas, false);
         } 
         
         function paint() {
+		//ctx.font = "30px Comic Sans MS";
+		//ctx.fillText("Chúc Mừng Năm Mới 2023", canvas.width/2, canvas.height/1.3);
+		//ctx.fillText("", canvas.width/3, canvas.height/1.23);
+		//ctx.fillText("", canvas.width/2, canvas.height/1.18);
+		//ctx.fillText("", canvas.width/2, canvas.height/1.13);
+
+		rectangledText(canvas.width/2,50,150,text,12,'30px Comic Sans MS');		
+
             ctx.globalCompositeOperation = 'source-over';
             ctx.fillStyle = "rgba(0,0,0,0.2)";
             ctx.fillRect(0, 0, w, h);
@@ -61,6 +71,44 @@ window.addEventListener("resize", resizeCanvas, false);
                 particles[i].draw(ctx);
             }
         } 
+
+	
+
+	function rectangledText(x,y,width,text,fontsize,fontface){
+
+	  ctx.fillStyle = "white";
+
+	  var height=wrapText(x,y,text,fontsize,fontface,width)
+
+	  ctx.strokeRect(x,y,width,height);
+
+	}
+
+	function wrapText(x,y,text,fontsize,fontface,maxwidth){
+	  var startingY=y;
+	  var words = text.split(' ');
+	  var line = '';
+	  var space='';
+	  var lineHeight = fontsize*1.286;
+	  ctx.font = fontsize + "px " + fontface;
+	  ctx.textAlign='left';
+	  ctx.textBaseline='top'
+	  for (var n=0; n<words.length; n++) {
+	    var testLine = line + space + words[n];
+	    space=' ';
+	    if (ctx.measureText(testLine).width > maxwidth) {
+	      ctx.fillText(line,x,y);
+	      line = words[n] + ' ';
+	      y += lineHeight;
+	      space='';
+	    } else {
+      	line = testLine;
+	    }
+	  }
+	  ctx.fillText(line, x,y);
+	  return(y+lineHeight-startingY);
+	}
+	 
         
         function createFirework() {
             xPoint = Math.random()*(w-200)+100;
