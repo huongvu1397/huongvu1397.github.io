@@ -1,247 +1,305 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Elevate Horizon &mdash; Home</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="PREPARE FOR EXTRAORDINARY EXPERIENCES" />
-	<meta name="keywords" content="elevate horizon" />
-	<meta name="author" content="freehtml5.co" />
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{Tên}} — Android Developer</title>
+  <meta name="description" content="{{Mô tả ngắn 1 câu về bạn}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --card:#111827; /* gray-900 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#9ca3af; /* gray-400 */
+      --line:#1f2937; /* gray-800 */
+      --line-2:#374151; /* gray-700 */
+      --accent:#34d399; /* emerald-400 */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;display:block}
 
-	<!-- 
-	//////////////////////////////////////////////////////
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.9);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
+    .nav{max-width:980px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .nav a{margin-left:16px;color:var(--text);opacity:.9}
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+    /* Layout */
+    .container{max-width:980px;margin:0 auto;padding:28px 20px}
+    .hero h1{font-size:40px;margin:16px 0 8px}
+    .hero p{margin:0 0 10px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .badge{background:#1f2937;border:1px solid var(--line-2);padding:6px 10px;border-radius:999px;font-size:12px}
 
-	//////////////////////////////////////////////////////
-	 -->
+    .section-title{font-weight:800;letter-spacing:.02em;margin:36px 0 10px}
+    .hr{height:1px;background:var(--line);margin:12px 0 18px}
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+    /* Filters + grid */
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}
+    .filter{padding:6px 12px;background:#1f2937;border:1px solid var(--line-2);border-radius:999px;cursor:pointer;font-size:13px;color:var(--text)}
+    .filter.active{background:var(--accent);color:#0b121f;border-color:transparent}
 
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    .card{background:var(--card);padding:14px;border-radius:16px;border:1px solid var(--line)}
+    .card h3{margin:10px 0 4px}
+    .small{color:var(--muted);font-size:14px}
 
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
-		<div id="fh5co-aside" style="background-image: url(images/main_1.jpg)">
-			<div class="overlay"></div>
-			<nav role="navigation">
-				<ul>
-					<li><a href="index.html"><i class="icon-home"></i></a></li>
-				</ul>
-			</nav>
-			<div class="featured">
-				<h2>Elevation Horizontal Team</h2>
-				<span>Prepare for Extraordinary Experiences</span>
-			</div>
-		</div>
-		<div id="fh5co-main-content">
-			<div class="fh5co-post"> 
-				<div class="fh5co-entry padding">
-					<img src="images/welcome.jpeg">
-					<div>
-						<span class="fh5co-post-date">June 14, 2024</span>
-						<h2><a href="single.html">Welcome to Elevate Horizon Team!</a></h2>
-						<p>Join us on this exciting journey as we embark on new adventures, explore uncharted territories, and bring extraordinary games to life. Together, we aim to redefine the future of gaming.</p>
-					</div>
-				</div>
+    .btn{display:inline-block;padding:8px 12px;border:1px solid var(--line-2);border-radius:10px;background:#111827;color:var(--text);font-size:14px;margin-right:8px}
+    .btn:hover{border-color:#4b5563}
 
-				 <!-- <div class="fh5co-entry padding">
-					<img src="images/project-2.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div> -->
-				
-				<!--
-				<div class="fh5co-entry padding">
-					<img src="images/project-3.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+    footer{border-top:1px solid var(--line);margin-top:40px;padding:18px 0 36px}
+      /* Lightbox */
+    .lightbox-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:100}
+    .lightbox{background:#0b1220;border:1px solid var(--line-2);border-radius:16px;max-width:min(92vw,980px);width:100%;max-height:90vh;display:flex;flex-direction:column;overflow:hidden}
+    .lightbox-header{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line)}
+    .lightbox-title{font-weight:600}
+    .lightbox-body{position:relative;display:flex;align-items:center;justify-content:center;padding:8px;background:#0b1220}
+    .lightbox-body img{max-height:70vh;width:auto;height:auto}
+    .lb-nav{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;transform:translateY(-50%);pointer-events:none}
+    .lb-btn{pointer-events:auto;background:rgba(17,24,39,.8);border:1px solid var(--line-2);border-radius:999px;padding:10px 12px;margin:0 8px;cursor:pointer}
+    .lb-close{cursor:pointer;border:1px solid var(--line-2);background:#111827;border-radius:8px;padding:6px 10px}
+    .lb-thumbs{display:flex;gap:8px;overflow:auto;padding:10px;border-top:1px solid var(--line);background:#0b1220}
+    .lightbox-desc{padding:10px 14px;border-top:1px solid var(--line);color:var(--muted);background:#0b1220;font-size:14px;line-height:1.6}
+    .lb-thumbs img{height:64px;width:auto;border:1px solid var(--line-2);border-radius:8px;opacity:.7;cursor:pointer}
+    .lb-thumbs img.active{opacity:1;outline:2px solid var(--accent)}
+    .card{cursor:pointer}
+    .lb-thumbs img{height:64px;width:auto;border:1px solid var(--line-2);border-radius:8px;opacity:.7;cursor:pointer}
+    .lb-thumbs img.active{opacity:1;outline:2px solid var(--accent)}
+    .card{cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">{{Tên}}</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-4.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+  <main class="container">
+    <!-- About -->
+    <section id="about" class="hero">
+      <h1>{{Tên}} — Android Developer</h1>
+      <p>Exceptionally motivated Android developer với {{số năm}} năm kinh nghiệm. Mạnh về {{UI tuỳ biến/CameraX/ExoPlayer/Compose/Room/Hilt/Coroutines}} và xây dựng trải nghiệm người dùng mượt mà.</p>
+      <p>Đã phát hành {{x}}+ ứng dụng, rating trung bình {{y}}★, tập trung vào hiệu năng (ANR/Crash thấp) và kiến trúc sạch.</p>
+      <div class="badges">
+        <span class="badge">Kotlin</span>
+        <span class="badge">Coroutines/Flow</span>
+        <span class="badge">Hilt</span>
+        <span class="badge">Room</span>
+        <span class="badge">Retrofit</span>
+        <span class="badge">Compose</span>
+        <span class="badge">ExoPlayer</span>
+        <span class="badge">CameraX</span>
+      </div>
+      <div class="hr"></div>
+    </section>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-5.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <h2 class="section-title">PORTFOLIO</h2>
+      <div class="filters">
+        <button class="filter active" data-filter="all">ALL</button>
+        <button class="filter" data-filter="android">ANDROID</button>
+        <button class="filter" data-filter="web">WEB</button>
+        <button class="filter" data-filter="other">OTHER</button>
+      </div>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-6.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+      <div class="grid" id="grid">
+        <!-- MẪU THẺ DỰ ÁN (sao chép nhân bản mỗi dự án) -->
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=11|https://picsum.photos/1200/700?random=12|https://picsum.photos/1200/700?random=13" data-desc="Điều khiển điều hoà từ xa: dò mã IR, test remote, lưu cấu hình; offline-first; đồng bộ danh sách remote." data-captions="Màn hình chọn thương hiệu|Màn test nút IR|Màn lưu Remote & dashboard">
+          <img src="https://picsum.photos/600/400?random=1" alt="Ảnh demo dự án">
+          <h3>Remote AC</h3>
+          <p class="small">MVVM · Hilt · Room · Retrofit · DataStore · Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_LINK}}" target="_blank" rel="noopener">Play Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-7.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=21|https://picsum.photos/1200/700?random=22|https://picsum.photos/1200/700?random=23" data-desc="Ứng dụng camera với filter/beauty, sticker, quay video ngắn; tối ưu pipeline hiển thị mượt." data-captions="Camera preview + filter|Sticker & layer|Export video">
+          <img src="https://picsum.photos/600/400?random=2" alt="Ảnh demo dự án">
+          <h3>UglyFace (Camera/Beauty)</h3>
+          <p class="small">CameraX · ExoPlayer · Custom Views · OpenGL/Filters (tuỳ)</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-8.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Gallery</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-1.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+        <!-- Ví dụ mục WEB/OTHER -->
+        <article class="card" data-cat="web" data-images="https://picsum.photos/1200/700?random=41|https://picsum.photos/1200/700?random=42">
+          <img src="https://picsum.photos/600/400?random=4" alt="Ảnh demo dự án web">
+          <h3>Landing Page</h3>
+          <p class="small">HTML · CSS · JS</p>
+          <p>
+            <a class="btn" href="{{LIVE_DEMO}}" target="_blank" rel="noopener">Live</a>
+            <a class="btn" href="{{REPO}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-2.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+        <article class="card" data-cat="other" data-images="https://picsum.photos/1200/700?random=51">
+          <img src="https://picsum.photos/600/400?random=5" alt="Ảnh demo khác">
+          <h3>Open-source Lib</h3>
+          <p class="small">Compose · Utilities</p>
+          <p>
+            <a class="btn" href="{{REPO}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+      </div>
+      <div class="hr"></div>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-3.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+      <!-- Lightbox markup -->
+      <div class="lightbox-backdrop" id="lightbox" aria-hidden="true">
+        <div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+          <div class="lightbox-header">
+            <div class="lightbox-title" id="lb-title">Xem trước dự án</div>
+            <button class="lb-close" id="lb-close" aria-label="Đóng">Đóng</button>
+          </div>
+          <div class="lightbox-body">
+            <img id="lb-image" alt="Preview" />
+            <div class="lb-nav">
+              <button class="lb-btn" id="lb-prev" aria-label="Ảnh trước">&#9664;</button>
+              <button class="lb-btn" id="lb-next" aria-label="Ảnh sau">&#9654;</button>
+            </div>
+          </div>
+          <div class="lightbox-desc" id="lb-desc">Mô tả dự án sẽ hiển thị ở đây.</div>
+          <div class="lb-thumbs" id="lb-thumbs"></div>
+        </div>
+      </div>
+    </section>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-4.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">CONTACT ME</h2>
+      <p><strong>{{Tên}}</strong><br/>
+        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br/>
+        {{Thành phố, Quốc gia}}
+      </p>
+      <p class="small">
+        <a href="{{GITHUB_PROFILE}}" target="_blank" rel="noopener">Xem dự án trên GitHub</a> ·
+        <a href="{{PLAY_DEVELOPER_LINK}}" target="_blank" rel="noopener">Play Store</a> ·
+        <a href="{{MEDIUM_OR_BLOG}}" target="_blank" rel="noopener">Blog/Medium</a>
+      </p>
+    </section>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-5.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+    <footer class="small">© {{Năm}} {{Tên}}. Hosted on GitHub Pages.</footer>
+  </main>
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-6.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+  <script>
+    // Lọc thẻ theo danh mục (ALL / ANDROID / WEB / OTHER)
+    const filters = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.card');
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter.active')?.classList.remove('active');
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        cards.forEach(c => {
+          const show = (f === 'all') || (c.dataset.cat === f);
+          c.style.display = show ? '' : 'none';
+        });
+      });
+    });
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-7.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div>
+    // Lightbox preview (mô tả cố định, không đổi khi chuyển ảnh)
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-image');
+    const lbTitle = document.getElementById('lb-title');
+    const lbClose = document.getElementById('lb-close');
+    const lbPrev = document.getElementById('lb-prev');
+    const lbNext = document.getElementById('lb-next');
+    const lbThumbs = document.getElementById('lb-thumbs');
+    const lbDesc = document.getElementById('lb-desc');
 
-				<div class="fh5co-entry padding">
-					<img src="images/project-8.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					<div>
-						<span class="fh5co-post-date">October 12, 2016</span>
-						<h2><a href="single.html">How to be an effective web developer</a></h2>
-						<p>How two simple exercises changed my life</p>
-					</div>
-				</div> -->
-				<footer>
-					<div>
-					</div>
-				</footer>
-			</div>
-		</div>
-	</div>
+    let currentImages = [];
+    let currentDesc = '';
+    let currentIndex = 0;
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
+    function openLightbox(title, images, desc = ''){
+      currentImages = images;
+      currentDesc = desc;
+      currentIndex = 0;
+      lbTitle.textContent = title;
+      lbDesc.textContent = currentDesc; // đặt 1 lần, không đổi khi chuyển ảnh
+      renderThumbs();
+      updateImage();
+      lb.style.display = 'flex';
+      lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
 
-	</body>
+    function closeLightbox(){
+      lb.style.display = 'none';
+      lb.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    function updateImage(){
+      if (!currentImages.length) return;
+      lbImg.src = currentImages[currentIndex];
+      Array.from(lbThumbs.children).forEach((img, i) => {
+        img.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function renderThumbs(){
+      lbThumbs.innerHTML = '';
+      currentImages.forEach((src, i) => {
+        const t = document.createElement('img');
+        t.src = src;
+        t.alt = 'thumb';
+        t.addEventListener('click', () => { currentIndex = i; updateImage(); });
+        lbThumbs.appendChild(t);
+      });
+    }
+
+    lbClose.addEventListener('click', closeLightbox);
+    lb.addEventListener('click', (e)=>{ if(e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', (e)=>{
+      if(lb.style.display === 'flex'){
+        if(e.key === 'Escape') closeLightbox();
+        if(e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentImages.length)%currentImages.length; updateImage(); }
+        if(e.key === 'ArrowRight'){ currentIndex = (currentIndex + 1)%currentImages.length; updateImage(); }
+      }
+    });
+
+    lbPrev.addEventListener('click', ()=>{ currentIndex = (currentIndex - 1 + currentImages.length)%currentImages.length; updateImage(); });
+    lbNext.addEventListener('click', ()=>{ currentIndex = (currentIndex + 1)%currentImages.length; updateImage(); });
+
+    // Click trên card để mở preview (bỏ qua khi click vào nút .btn)
+    cards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        if(e.target.closest('.btn')) return; // giữ hành vi mở link
+        const title = card.querySelector('h3')?.textContent?.trim() || 'Preview';
+        const raw = card.dataset.images || card.querySelector('img')?.src;
+        const images = (raw || '').split('|').filter(Boolean);
+        const desc = card.dataset.desc || '';
+        if(images.length){ openLightbox(title, images, desc); }
+      });
+    });
+  </script>
+</body>
 </html>
-
