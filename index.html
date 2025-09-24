@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Huong Vu Van — Android Developer</title>
-  <meta name="description" content="{{Mô tả ngắn 1 câu về bạn}}" />
+  <meta name="description" content="I am an Android developer with 5+ years of experience" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -21,7 +21,14 @@
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
     a{color:var(--accent);text-decoration:none}
-    img{max-width:100%;display:block}
+    img{
+      /*max-width:100%;display:block*/
+      /*aspect-ratio:1/1;*/
+      width:100%;
+      height:181px;
+      object-fit:cover;
+      border-radius:12px;
+    }
 
     /* Header */
     header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.9);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--line)}
@@ -64,9 +71,9 @@
     .lightbox-body{position:relative;display:flex;align-items:center;justify-content:center;padding:8px;background:#0b1220}
     .lightbox-body img{max-height:70vh;width:auto;height:auto}
     .lb-nav{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;transform:translateY(-50%);pointer-events:none}
-    .lb-btn{pointer-events:auto;background:rgba(17,24,39,.8);border:1px solid var(--line-2);border-radius:999px;padding:10px 12px;margin:0 8px;cursor:pointer}
-    .lb-close{cursor:pointer;border:1px solid var(--line-2);background:#111827;border-radius:8px;padding:6px 10px}
-    .lb-thumbs{display:flex;gap:8px;overflow:auto;padding:10px;border-top:1px solid var(--line);background:#0b1220}
+    .lb-btn{pointer-events:auto;background:rgba(255, 255, 255, 0.8);border:1px solid var(--line-2);border-radius:999px;padding:10px 12px;margin:0 8px;cursor:pointer}
+    .lb-close{cursor:pointer;border:1px solid var(--line-2);background:#fff;border-radius:8px;padding:6px 10px}
+    .lb-thumbs{display:flex;gap:8px;overflow:auto;padding:10px;border-top:1px solid var(--line);background:#0b1220;justify-content:center;} /* lbthumbs display*/
     .lightbox-desc{padding:10px 14px;border-top:1px solid var(--line);color:var(--muted);background:#0b1220;font-size:14px;line-height:1.6}
     .lb-thumbs img{height:64px;width:auto;border:1px solid var(--line-2);border-radius:8px;opacity:.7;cursor:pointer}
     .lb-thumbs img.active{opacity:1;outline:2px solid var(--accent)}
@@ -131,6 +138,15 @@
           </p>
         </article>
 
+        <article class="card" data-cat="android" data-images="images/lock_screen/lock_1.webp|images/lock_screen/lock_2.webp|images/lock_screen/lock_3.webp|images/lock_screen/lock_4.png" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="images/lock_screen/lock_1.webp" alt="Ảnh demo dự án">
+          <h3>Together Lockscreen Drawing</h3>
+          <p class="small">MVVM · Room · Glide · XML</p>
+          <p>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.lockscreen.lockdrawing" target="_blank" rel="noopener">Play Store</a>
+          </p>
+        </article>
+
         <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=21|https://picsum.photos/1200/700?random=22|https://picsum.photos/1200/700?random=23" data-desc="Ứng dụng camera với filter/beauty, sticker, quay video ngắn; tối ưu pipeline hiển thị mượt." data-captions="Camera preview + filter|Sticker & layer|Export video">
           <img src="https://picsum.photos/600/400?random=2" alt="Ảnh demo dự án">
           <h3>UglyFace (Camera/Beauty)</h3>
@@ -143,7 +159,17 @@
 
         <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
           <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
-          <h3>Gallery</h3>
+          <h3>MindBlow</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Text Repeater</h3>
           <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
           <p>
             <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
@@ -154,7 +180,7 @@
         <!-- Ví dụ mục WEB/OTHER -->
         <article class="card" data-cat="web" data-images="https://picsum.photos/1200/700?random=41|https://picsum.photos/1200/700?random=42">
           <img src="https://picsum.photos/600/400?random=4" alt="Ảnh demo dự án web">
-          <h3>Landing Page</h3>
+          <h3>Face Effect</h3>
           <p class="small">HTML · CSS · JS</p>
           <p>
             <a class="btn" href="{{LIVE_DEMO}}" target="_blank" rel="noopener">Live</a>
@@ -162,23 +188,135 @@
           </p>
         </article>
 
-        <article class="card" data-cat="other" data-images="https://picsum.photos/1200/700?random=51">
+        <!-- <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Talking Animal</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article> -->
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Talking Animal</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Eye Protectetor</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Pet Translator</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Voice Change</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Photo Recovery</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>APK Backup</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Video Editor</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="https://picsum.photos/1200/700?random=31|https://picsum.photos/1200/700?random=32" data-desc="Trình xem ảnh thư viện: nhóm theo ngày, paging hiệu năng, chỉnh sửa cơ bản." data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="https://picsum.photos/600/400?random=3" alt="Ảnh demo dự án">
+          <h3>Image Converter</h3>
+          <p class="small">Paging3 · Room · Coil · ConstraintLayout / Compose</p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK/Store</a>
+            <a class="btn" href="{{GITHUB_LINK}}" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </article>
+
+        <article class="card" data-cat="android" data-images="images/screen_recorder/screen_1.png|images/screen_recorder/screen_2.png|images/screen_recorder/screen_3.png|images/screen_recorder/screen_4.png|images/screen_recorder/screen_5.png|images/screen_recorder/screen_6.png|images/screen_recorder/screen_7.png|images/screen_recorder/screen_8.png|images/screen_recorder/screen_9.png|images/screen_recorder/screen_10.png" 
+              data-desc="Supports users in recording all activities on their mobile devices, with integrated basic video editing tools including trimming, merging, and adding background music."
+              data-captions="Lưới ảnh theo ngày|Màn hình xem chi tiết">
+          <img src="images/screen_recorder/screen_2.png" alt="Ảnh demo dự án">
+          <h3>Screen Recorder</h3>
+          <p class="small">Java · Kotlin · MediaProjection · FFmpeg · MVC</p>
+          <p></p>
+          <p>
+            <a class="btn" href="{{PLAY_STORE_OR_APK}}" target="_blank" rel="noopener">APK</a>
+          </p>
+        </article>
+
+        <!-- <article class="card" data-cat="other" data-images="https://picsum.photos/1200/700?random=51">
           <img src="https://picsum.photos/600/400?random=5" alt="Ảnh demo khác">
-          <h3>Open-source Lib</h3>
+          <h3>Prank Call Santa</h3>
           <p class="small">Compose · Utilities</p>
           <p>
             <a class="btn" href="{{REPO}}" target="_blank" rel="noopener">GitHub</a>
           </p>
         </article>
       </div>
-      <div class="hr"></div>
+      <div class="hr"></div> -->
+
+      <!-- <article class="card" data-cat="web" data-images="https://picsum.photos/1200/700?random=41|https://picsum.photos/1200/700?random=42">
+        <img src="https://picsum.photos/600/400?random=4" alt="Ảnh demo dự án web">
+        <h3>Talking Animal</h3>
+        <p class="small">HTML · CSS · JS</p>
+        <p>
+          <a class="btn" href="{{LIVE_DEMO}}" target="_blank" rel="noopener">Live</a>
+          <a class="btn" href="{{REPO}}" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </article> -->
 
       <!-- Lightbox markup -->
       <div class="lightbox-backdrop" id="lightbox" aria-hidden="true">
         <div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title">
           <div class="lightbox-header">
             <div class="lightbox-title" id="lb-title">Xem trước dự án</div>
-            <button class="lb-close" id="lb-close" aria-label="Đóng">Đóng</button>
+            <button class="lb-close" id="lb-close" aria-label="Đóng" >Close</button>
           </div>
           <div class="lightbox-body">
             <img id="lb-image" alt="Preview" />
